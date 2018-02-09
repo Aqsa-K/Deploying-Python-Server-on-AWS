@@ -113,7 +113,7 @@ To check program output, open the nohup.out file:
 sudo tail -f nohup.out
 ```
 
-
+## Killing a process
 To kill a process, use the process number:
 ```
 ps ax | grep run.py
