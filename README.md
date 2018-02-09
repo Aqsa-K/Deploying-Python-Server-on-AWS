@@ -2,7 +2,7 @@
 Steps/commands on how to easily deploy a python server on your AWS Ubuntu machine using PUTTY 
 
 ## Dependencies required:
-###Python3
+### Python3
 ```
 sudo apt-get upgrade
 sudo apt-get update
