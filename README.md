@@ -38,5 +38,31 @@ Call your run.py file through a separate text file with an arbitrary name such a
 
 Add `#!/bin/sh` as the first line of your code in `starter.sh` file 
 
-Try executing your starter.sh file by `sudo starter.sh`
+Try executing your starter.sh file by `sudo starter.sh` to make sure there are no errors in execution steps
+
+## PUTTY
+Start your session on PUTTY
+
+Clone your git repository
+```
+git clone 'link to repository'
+```
+
+## Automatic startup of run.py file
+To make sure your run.py is automatically run whenever the AWS machine restarts you'll have to add the path to your rc.local script. 
+
+Following are the steps:
+
+Provide your `/etc/rc.local script` with the full path and name of your createrd scrit after the 'sh' command - (your etc folder will be in the outermost directory)
+
+Use vim to edit your rc.local script
+```
+sudo vim rc.local
+```
+Put the following line before the last line of code (`exit 0`) at the end of the /etc/rc.local script
+```
+sh '/path/to/your/script/starter.sh'
+```
+
+
 
