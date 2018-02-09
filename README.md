@@ -55,33 +55,38 @@ Following are the steps:
 
 Provide your `/etc/rc.local script` with the full path and name of your createrd scrit after the 'sh' command - (your etc folder will be in the outermost directory)
 
-Use vim to edit your rc.local script
+Use vim to edit your rc.local script:
 ```
 sudo vim rc.local
 ```
+
 Put the following line before the last line of code (`exit 0`) at the end of the /etc/rc.local script
 ```
 sh '/path/to/your/script/starter.sh'
 ```
+
 Check that the first line of `etc/rc.local script` is:
 ```
 #!/bin/sh -e
 ```
+
 Go to your outermost directory
 
-Check that it has 'etc' and 'home' folders
+Check that it has 'etc' and 'home' folders:
 
 ```
 ls
 ```
 The above command displays all folders in the current command
 
-Make your `/etc/rc.local` script executable in case it is not already executable by
+
+Make your `/etc/rc.local` script executable in case it is not already executable by:
 ```
 sudo chown root /etc/rc.local
 sudo chmod 755 /etc/rc.local
 ```
-Check everything works fine by executing
+
+Check everything works fine by executing:
 ```
 sudo /etc/init.d/rc.local start
 ```
@@ -89,23 +94,27 @@ This should start the starter.sh file and hence, the run.py file being called in
 
 That is, your run.py file should start running, it should be executed by this step
 
-Check that the process has actually started
+
+Check that the process has actually started:
 ```
 ps -ef
 ```
 This should display all the processes currently running on the AWS machine
 
-You can also check the running instances of only run.py process
+
+You can also check the running instances of only run.py process:
 ```
 ps ax | grep run.py
 ```
 
-To check program output, open the nohup.out file
+
+To check program output, open the nohup.out file:
 ```
 sudo tail -f nohup.out
 ```
 
-To kill a process, use the process number
+
+To kill a process, use the process number:
 ```
 ps ax | grep run.py
 ```
